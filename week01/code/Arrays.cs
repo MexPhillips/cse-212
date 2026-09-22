@@ -12,8 +12,18 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        // 1. Create an array with the requested number of entries.
+        // 2. Visit each array index from the beginning to the end.
+        // 3. Store the input number multiplied by the 1-based position at that index.
+        // 4. Return the completed array.
 
-        return []; // replace this return statement with your own
+        double[] multiples = new double[length];
+        for (int index = 0; index < length; index++)
+        {
+            multiples[index] = number * (index + 1);
+        }
+
+        return multiples;
     }
 
     /// <summary>
@@ -29,5 +39,14 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        // 1. Find how many items stay at the front after the right rotation.
+        // 2. Copy those front items so they are not lost when the list is changed.
+        // 3. Remove the copied items from the front of the existing list.
+        // 4. Append the copied items to the end of the same list.
+
+        int frontItemCount = data.Count - amount;
+        List<int> itemsToMove = data.GetRange(0, frontItemCount);
+        data.RemoveRange(0, frontItemCount);
+        data.AddRange(itemsToMove);
     }
 }
