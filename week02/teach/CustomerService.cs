@@ -15,7 +15,7 @@ public class CustomerService {
         // Expected Result: 
         Console.WriteLine("Test 1");
 
-        // Defect(s) Found: 
+        // Defect(s) Found: This found that the ServeCustomer should get the customer before deleting from the list
 
         Console.WriteLine("=================");
 
@@ -24,7 +24,7 @@ public class CustomerService {
         // Expected Result: 
         Console.WriteLine("Test 2");
 
-        // Defect(s) Found: 
+        // Defect(s) Found: None :)
 
         Console.WriteLine("=================");
 
